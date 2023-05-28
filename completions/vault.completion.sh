@@ -17,7 +17,7 @@ function _vault_mounts() {
 }
 
 function _vault() {
-  local VAULT_COMMANDS=$(vault 2>&1 | egrep '^ +' | awk '{print $1}')
+  local VAULT_COMMANDS=$(vault 2>&1 | command grep -E '^ +' | awk '{print $1}')
 
   local cur
   local prev
@@ -32,7 +32,7 @@ function _vault() {
   if [[ $prev =~ ^(policies|policy-write|policy-delete) ]]; then
     local policies=$(vault policies 2> /dev/null)
     COMPREPLY=($(compgen -W "$policies" -- $cur))
-  elif [ "$(echo $line | wc -w)" -le 2 ]; then
+  elif [ "$(echo "$line" | wc -w)" -le 2 ]; then
     if [[ "$line" =~ ^vault\ (read|write|delete|list)\ $ ]]; then
       COMPREPLY=($(compgen -W "$(_vault_mounts)" -- ''))
     else

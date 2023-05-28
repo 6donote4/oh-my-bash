@@ -2,6 +2,10 @@
 
 [![](90210/90210-dark.png)](90210/90210-dark.png)
 
+## `ab+simple`
+
+[![](absimple/absimple-bash.png)](absimple/absimple-bash.png)
+
 ## `agnoster`
 
 [![](agnoster/agnoster-bash-sshot.png)](agnoster/agnoster-bash-sshot.png)
@@ -159,6 +163,10 @@
 ## `powerline`
 
 [![](powerline/powerline-dark.png)](powerline/powerline-dark.png)
+
+## `powerline-light`
+
+[![](powerline-light/powerline-light.png)](powerline-light/powerline-light.png)
 
 ## `powerline-multiline`
 
